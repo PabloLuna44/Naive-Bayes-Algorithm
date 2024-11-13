@@ -19,12 +19,15 @@ This project provides a Naïve-Bayes library/API that supports various functiona
 ##  🖥️ Results
 
 - Dataset
+  
 ![image](https://github.com/user-attachments/assets/be41825a-5f58-4419-a17e-9ae0fcde75ea)
 
 - Train
+  
 ![image](https://github.com/user-attachments/assets/6c18ff94-5e82-42e7-a1e6-412190abc6c3)
 
 - Test
+  
 ![image](https://github.com/user-attachments/assets/26de281b-caf0-4ab3-a9a8-25ae3eeb220a)
 
 
