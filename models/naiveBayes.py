@@ -39,13 +39,13 @@ class NaiveBayes:
 
     #input: value
     #output: rounded value
-    def custom_round(self,value):
+    def customRound(self,value):
         return math.floor(value + 0.5)
     
 
     #input: x, mean, std
     #output: normal distribution value
-    def normal_distribution(self,x, mean, std):
+    def normalDistribution(self,x, mean, std):
         result = (1 / (math.sqrt(2 * math.pi * std))) * math.exp(-((x - mean)**2 / (2 * std**2)))
         result=str(result)
         return float(result[0:7])
@@ -58,13 +58,13 @@ class NaiveBayes:
         for classValue in self.numericalColumnsClassValues:
 
             for column in self.numericalColumnsClassValues[classValue]:
-                mean = self.custom_round(self.numericalColumnsClassValues[classValue][column].mean())
+                mean = self.customRound(self.numericalColumnsClassValues[classValue][column].mean())
                 std = round(self.numericalColumnsClassValues[classValue][column].std(), 1)
                 instance_value = self.instance[column]
                 arr.append({
                     'column': column,
                     'class': classValue,
-                    'prob': self.normal_distribution(instance_value, mean, std)
+                    'prob': self.normalDistribution(instance_value, mean, std)
                 })
         return arr
     
